@@ -6,7 +6,7 @@
 /*   By: sencetin <sencetin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 21:11:04 by sencetin          #+#    #+#             */
-/*   Updated: 2025/02/26 21:37:44 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/02/26 21:50:32 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,12 @@ static	void	ft_get_stack(t_stack **stack, int argc, char **argv)
 	while (split[i])
 	{
 		new = ft_lstnew(ft_atoi(split[i++]));
+		//indeksleri -1'den başlat
 		ft_lstadd_back(stack, new);
 	}
 	ft_double(*stack);
+	// integer check
+	// 12 karakterden büyük mü check
 	ft_free_str(split);
 	free(str);
 	ft_index(stack);
@@ -65,7 +68,7 @@ int	main(int argc, char **argv)
 		ft_free_stack(stack_b);
 		return (0);
 	}
-	ft_double(*stack_a);
+	// ft_double(*stack_a); gereksiz bir eleman olabilir bu
 	ft_stack_sort(stack_a, stack_b);
 	ft_free_stack(stack_a);
 	ft_free_stack(stack_b);
