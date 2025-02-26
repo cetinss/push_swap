@@ -6,15 +6,15 @@
 /*   By: sencetin <sencetin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 14:38:11 by sencetin          #+#    #+#             */
-/*   Updated: 2025/02/26 14:44:32 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/02/26 21:12:26 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_pa(t_list **stack_a, t_list **stack_b)
+void	ft_pa(t_stack **stack_a, t_stack **stack_b)
 {
-	t_list *tmp;
+	t_stack *tmp;
 	
 	if (stack_b == NULL || *stack_b == NULL || stack_a == NULL)
 		return ;
@@ -25,9 +25,9 @@ void	ft_pa(t_list **stack_a, t_list **stack_b)
 	write(1, "pa\n", 3);
 }
 
-void	ft_pb(t_list **stack_a, t_list **stack_b)
+void	ft_pb(t_stack **stack_a, t_stack **stack_b)
 {
-	t_list *tmp;
+	t_stack *tmp;
 
 	if (stack_a == NULL || *stack_a == NULL || stack_a == NULL)
 		return ;
