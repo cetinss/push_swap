@@ -1,16 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils1.c                                           :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sencetin <sencetin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/26 21:20:23 by sencetin          #+#    #+#             */
-/*   Updated: 2025/02/26 21:20:25 by sencetin         ###   ########.fr       */
+/*   Created: 2024/10/08 19:57:30 by sencetin          #+#    #+#             */
+/*   Updated: 2024/11/02 11:10:31 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "push_swap.h"
 
 int	ft_atoi(const char *str)
 {
@@ -35,21 +33,4 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (result * sign);
-}
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-int	ft_isdigit(int a)
-{
-	if (a <= '9' && a >= '0')
-		return (1);
-	return (0);
 }

@@ -62,7 +62,7 @@ test100:			$(NAME)
 					@echo -n "Instructions: "
 					@./push_swap $(ARG) | wc -l
 
-test500:			$(NAME)	
+test500:			$(NAME)
 					$(eval ARG = $(shell shuf -i 0-5000 -n 500))
 					./push_swap $(ARG) | ./checker_linux $(ARG)
 					@echo -n "Instructions: "
