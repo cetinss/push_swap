@@ -6,12 +6,12 @@
 #    By: sencetin <sencetin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 14:54:09 by sencetin          #+#    #+#              #
-#    Updated: 2024/11/02 16:01:04 by sencetin         ###   ########.fr        #
+#    Updated: 2025/03/04 15:43:05 by sencetin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fPIC
 CC = cc
 FILES =	ft_atoi.c ft_memchr.c ft_split.c ft_strncmp.c ft_bzero.c \
 		ft_memcmp.c ft_strchr.c ft_strnstr.c ft_calloc.c ft_memcpy.c \

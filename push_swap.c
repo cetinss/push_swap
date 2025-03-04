@@ -6,7 +6,7 @@
 /*   By: sencetin <sencetin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 21:11:04 by sencetin          #+#    #+#             */
-/*   Updated: 2025/03/04 12:33:40 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/04 18:01:31 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,30 +23,29 @@ void	ft_stack_sort(t_stack **stack_a, t_stack **stack_b)
 static	void	ft_get_stack(t_stack **stack, int argc, char **argv)
 {
 	t_stack	*new;
-	char	**split;
+	char	**splitted;
 	int		i;
-	char	*str;
-
-	str = NULL;
+	int		j;
+	
 	i = 1;
 	while (i < argc)
 	{
-		str = ft_strjoin(str, argv[i++]);
-		str = ft_strjoin(str, " ");
+		splitted = ft_split(argv[i++], ' ');
+		j = 0;
+		while (splitted[j])
+		{
+			new = ft_lstnew(ft_atoi(splitted[j]));
+			if (!new)
+			{
+				ft_free_str(splitted);
+				ft_free_stack(stack);
+				return ;
+			}
+			ft_lstadd_back(stack, new);
+			j++;
+		}
+		ft_free_str(splitted);
 	}
-	split = ft_split(str, ' ');
-	i = 0;
-	while (split[i])
-	{
-		new = ft_lstnew(ft_atoi(split[i++]));
-		//indeksleri -1'den başlat
-		ft_lstadd_back(stack, new);
-	}
-	ft_double(*stack);
-	// integer check
-	// 12 karakterden büyük mü check
-	ft_free_str(split);
-	free(str);
 	ft_index(stack);
 }
 
@@ -57,6 +56,7 @@ int	main(int argc, char **argv)
 
 	if (argc < 2)
 		return (-1);
+	validate_arguments(argv);
 	stack_a = (t_stack **)malloc(sizeof(t_stack));
 	stack_b = (t_stack **)malloc(sizeof(t_stack));
 	*stack_a = NULL;
