@@ -6,7 +6,7 @@
 /*   By: sencetin <sencetin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 21:11:04 by sencetin          #+#    #+#             */
-/*   Updated: 2025/03/05 15:28:23 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/05 15:40:18 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	display_stack(t_stack *stack) // silinecek
 		stack = stack->next;
 	}
 }
-
 
 // static void	ft_stack_sort(t_stack **stack_a, t_stack **stack_b)
 // {
