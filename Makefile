@@ -1,40 +1,36 @@
 NAME		= push_swap
-
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror -I includes
 
-SRC_FILES	= main.c \
-			  init.c \
-			  basic_sort.c \
-			  radix_sort.c \
-			  basics.c \
-			  check_args.c \
-			  error.c \
-			  free.c \
-			  index.c \
-			  linked_list.c \
-			  split.c \
-			  putnbr.c \
-			  swap.c \
-			  push.c \
-			  rotate.c \
-			  reverse_rotate.c \
+SRC_FILES	= actions_push.c \
+				actions_rotate.c \
+				actions_swap.c \
+				free.c \
+				push_swap.c \
+				stack.c \
+				validate_args.c \
+
+
 
 OBJ_FILES	= $(SRC_FILES:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ_FILES)
-	$(CC) $(CFLAGS) $(OBJ_FILES) -o $(NAME)
+	$(MAKE) -C libft
+	$(MAKE) -C libft bonus
+	$(CC) $(CFLAGS) $(OBJ_FILES) ./libft/libft.a -o $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ_FILES)
+	$(MAKE) -C libft clean
 
 fclean: clean
 	rm -f $(NAME)
+	$(MAKE) -C libft fclean
 
 re: fclean all
 

@@ -6,7 +6,7 @@
 /*   By: sencetin <sencetin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 14:38:11 by sencetin          #+#    #+#             */
-/*   Updated: 2025/02/26 21:12:26 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/05 14:19:20 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_pa(t_stack **stack_a, t_stack **stack_b)
 	tmp = *stack_b;
 	*stack_b = (*stack_b)->next;
 	tmp->next = NULL;
-	ft_lstadd_front(stack_a, tmp);
+	ft_stackadd_front(stack_a, tmp);
 	write(1, "pa\n", 3);
 }
 
@@ -34,6 +34,6 @@ void	ft_pb(t_stack **stack_a, t_stack **stack_b)
 	tmp = *stack_a;
 	*stack_a = (*stack_a)->next;
 	tmp->next = NULL;
-	ft_lstadd_front(stack_b, tmp);
+	ft_stackadd_front(stack_b, tmp);
 	write(1, "pb\n", 3);
 }
