@@ -9,8 +9,9 @@ SRC_FILES	= actions_push.c \
 				push_swap.c \
 				stack.c \
 				validate_args.c \
-
-
+				index.c \
+				basic.c \
+				radix.c \
 
 OBJ_FILES	= $(SRC_FILES:.c=.o)
 
