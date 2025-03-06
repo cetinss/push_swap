@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   radix_optimized.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sencetin <sencetin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sencetin <sencetin@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 11:45:16 by sencetin          #+#    #+#             */
-/*   Updated: 2025/03/06 12:04:41 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/06 21:02:48 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

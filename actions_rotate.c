@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   actions_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sencetin <sencetin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sencetin <sencetin@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 13:09:24 by sencetin          #+#    #+#             */
-/*   Updated: 2025/03/05 14:19:26 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/06 21:01:52 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

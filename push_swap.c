@@ -3,41 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sencetin <sencetin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sencetin <sencetin@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 21:11:04 by sencetin          #+#    #+#             */
-/*   Updated: 2025/03/06 13:33:18 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/06 21:04:26 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// void	display_stack(t_stack *stack) // silinecek
-// {
-// 	char	*str;
-
-// 	while (stack)
-// 	{
-// 		ft_putstr_fd("Value: ", 1);
-// 		str = ft_itoa(stack->content);
-// 		ft_putstr_fd(str, 1);
-// 		free(str);
-// 		ft_putstr_fd(", Index: ", 1);
-// 		str = ft_itoa(stack->index);
-// 		ft_putstr_fd(str, 1);
-// 		free(str);
-// 		ft_putstr_fd("\n", 1);
-// 		stack = stack->next;
-// 	}
-// }
-
-// static void	ft_stack_sort(t_stack **stack_a, t_stack **stack_b)
-// {
-// 	if (ft_stacksize(*stack_a) <= 5)
-// 		ft_basic_sort(stack_a, stack_b);
-// 	else if (ft_stacksize(*stack_a) > 5)
-// 		ft_radix(stack_a, stack_b);
-// }
+static void	ft_stack_sort(t_stack **stack_a, t_stack **stack_b)
+{
+ 	if (ft_stacksize(*stack_a) <= 5)
+ 		ft_basic_sort(stack_a, stack_b);
+	else if (ft_stacksize(*stack_a) > 5)
+ 		radix_sort(stack_a, stack_b);
+}
 
 static	int ft_is_sorted(t_stack *stack)
 {
@@ -101,9 +82,8 @@ int	main(int argc, char **argv)
 	 	ft_free_stack(stack_b);
 	 	return (0);
 	}
-	//display_stack(*stack_a);
-	//ft_stack_sort(stack_a, stack_b);
-	ft_radix_optimized(stack_a, stack_b);
+	ft_stack_sort(stack_a, stack_b);
+	//ft_radix_optimized(stack_a, stack_b);
 	ft_free_stack(stack_a);
 	ft_free_stack(stack_b);
 	return (0);
