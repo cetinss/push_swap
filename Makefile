@@ -12,6 +12,7 @@ SRC_FILES	= actions_push.c \
 				index.c \
 				basic.c \
 				radix.c \
+				radix_optimized.c \
 
 OBJ_FILES	= $(SRC_FILES:.c=.o)
 

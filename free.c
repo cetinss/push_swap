@@ -6,7 +6,7 @@
 /*   By: sencetin <sencetin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:21:08 by sencetin          #+#    #+#             */
-/*   Updated: 2025/03/05 14:19:29 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/06 13:53:14 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,11 @@ void	ft_free_stack(t_stack **stack)
 		free(tmp);
 	}
 	free(stack);
+}
+
+void	error_exit(char **splitted)
+{
+	ft_free_str(splitted);
+	write(2, "Error\n", 6);
+	exit (1);
 }

@@ -6,30 +6,30 @@
 /*   By: sencetin <sencetin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 21:11:04 by sencetin          #+#    #+#             */
-/*   Updated: 2025/03/05 15:40:18 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/06 13:33:18 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	display_stack(t_stack *stack) // silinecek
-{
-	char	*str;
+// void	display_stack(t_stack *stack) // silinecek
+// {
+// 	char	*str;
 
-	while (stack)
-	{
-		ft_putstr_fd("Value: ", 1);
-		str = ft_itoa(stack->content);
-		ft_putstr_fd(str, 1);
-		free(str);
-		ft_putstr_fd(", Index: ", 1);
-		str = ft_itoa(stack->index);
-		ft_putstr_fd(str, 1);
-		free(str);
-		ft_putstr_fd("\n", 1);
-		stack = stack->next;
-	}
-}
+// 	while (stack)
+// 	{
+// 		ft_putstr_fd("Value: ", 1);
+// 		str = ft_itoa(stack->content);
+// 		ft_putstr_fd(str, 1);
+// 		free(str);
+// 		ft_putstr_fd(", Index: ", 1);
+// 		str = ft_itoa(stack->index);
+// 		ft_putstr_fd(str, 1);
+// 		free(str);
+// 		ft_putstr_fd("\n", 1);
+// 		stack = stack->next;
+// 	}
+// }
 
 // static void	ft_stack_sort(t_stack **stack_a, t_stack **stack_b)
 // {
@@ -88,7 +88,7 @@ int	main(int argc, char **argv)
 	t_stack	**stack_b;
 
 	if (argc < 2)
-		return (-1);
+		exit (1);
 	validate_arguments(argv);
 	stack_a = (t_stack **)malloc(sizeof(t_stack));
 	stack_b = (t_stack **)malloc(sizeof(t_stack));
@@ -101,8 +101,9 @@ int	main(int argc, char **argv)
 	 	ft_free_stack(stack_b);
 	 	return (0);
 	}
-	display_stack(*stack_a);
+	//display_stack(*stack_a);
 	//ft_stack_sort(stack_a, stack_b);
+	ft_radix_optimized(stack_a, stack_b);
 	ft_free_stack(stack_a);
 	ft_free_stack(stack_b);
 	return (0);
