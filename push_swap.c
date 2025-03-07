@@ -6,7 +6,7 @@
 /*   By: sencetin <sencetin@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 21:11:04 by sencetin          #+#    #+#             */
-/*   Updated: 2025/03/06 21:04:26 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/07 22:17:02 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static	int ft_is_sorted(t_stack *stack)
 	return (1);
 }
 
-static	void	ft_get_stack(t_stack **stack, int argc, char **argv)
+static	void	ft_get_stack(t_stack **stack, int argc, char **argv) // splitlemeyi yapmaya gerek yok
 {
 	t_stack	*new;
 	char	**splitted;

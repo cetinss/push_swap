@@ -6,7 +6,7 @@
 /*   By: sencetin <sencetin@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 15:41:16 by sencetin          #+#    #+#             */
-/*   Updated: 2025/03/06 21:02:58 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/07 22:22:19 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ static char	*join_args(char **argv)
 	{
 		temp = ft_strjoin(joined, " ");
 		free(joined);
-		temp2 = ft_strjoin(temp, argv[i]);
+		temp2 = ft_strjoin(temp, argv[i]); //temp2 siz yap.
 		free(temp);
 		joined = temp2;
 		i++;
@@ -116,6 +116,7 @@ int validate_arguments(char **argv)
     }
     if (has_duplicates(splitted))
         error_exit(splitted);
+	// ft_get_stack(stack_a, argc, argv, splitted);
     ft_free_str(splitted);
     return (1);
 }
