@@ -6,7 +6,7 @@
 /*   By: sencetin <sencetin@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 15:32:47 by sencetin          #+#    #+#             */
-/*   Updated: 2025/03/06 21:05:28 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/08 02:57:16 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	get_max_bits(t_stack *stack)
 {
-	int max_bits;
-	int max;
+	int	max_bits;
+	int	max;
 
 	max_bits = 0;
 	max = 0;

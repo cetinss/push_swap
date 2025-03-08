@@ -6,7 +6,7 @@
 /*   By: sencetin <sencetin@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:21:08 by sencetin          #+#    #+#             */
-/*   Updated: 2025/03/06 21:02:17 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/08 02:52:13 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_free_str(char **str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -27,7 +27,7 @@ void	ft_free_str(char **str)
 
 void	ft_free_stack(t_stack **stack)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	while (*stack)
 	{

@@ -6,7 +6,7 @@
 /*   By: sencetin <sencetin@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 14:38:19 by sencetin          #+#    #+#             */
-/*   Updated: 2025/03/06 21:02:04 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/08 02:51:44 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_sa(t_stack **stack_a)
 {
-	t_stack *first;
-	t_stack *second;
+	t_stack	*first;
+	t_stack	*second;
 
 	if (!stack_a || !(*stack_a) || !((*stack_a)->next))
 		return ;
@@ -29,8 +29,8 @@ void	ft_sa(t_stack **stack_a)
 
 void	ft_sb(t_stack **stack_b)
 {
-	t_stack *first;
-	t_stack *second;
+	t_stack	*first;
+	t_stack	*second;
 
 	if (!stack_b || !(*stack_b) || !((*stack_b)->next))
 		return ;

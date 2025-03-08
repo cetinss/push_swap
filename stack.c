@@ -6,7 +6,7 @@
 /*   By: sencetin <sencetin@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 13:33:24 by sencetin          #+#    #+#             */
-/*   Updated: 2025/03/06 21:02:54 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/08 02:57:42 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ t_stack	*ft_stacknew(int content)
 	if (!new)
 		return (0);
 	new->content = content;
-	new->index = -1; 
+	new->index = -1;
 	new->next = NULL;
 	return (new);
 }

@@ -6,12 +6,12 @@
 /*   By: sencetin <sencetin@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 13:28:56 by sencetin          #+#    #+#             */
-/*   Updated: 2025/03/06 21:05:02 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/08 02:57:03 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP
-# define PUSH_SWAP
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 # include "./libft/libft.h"
 # include <stdlib.h>
@@ -20,7 +20,7 @@
 typedef struct s_stack
 {
 	int				content;
-	int 			index;
+	int				index;
 	struct s_stack	*next;
 }					t_stack;
 
@@ -41,7 +41,6 @@ void	ft_free_str(char **str);
 void	ft_free_stack(t_stack **stack);
 void	error_exit(char **splitted);
 void	ft_index(t_stack **stack);
-//void	ft_radix_optimized(t_stack **a, t_stack **b);
 void	ft_basic_sort(t_stack **stack_a, t_stack **stack_b);
 void	radix_sort(t_stack **stack_a, t_stack **stack_b);
 

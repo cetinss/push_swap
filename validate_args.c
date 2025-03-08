@@ -6,7 +6,7 @@
 /*   By: sencetin <sencetin@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 15:41:16 by sencetin          #+#    #+#             */
-/*   Updated: 2025/03/07 22:22:19 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/08 03:05:17 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static long	ft_atol(const char *str)
 {
-	int     i;
-	int     sign;
-	long    result;
+	int		i;
+	int		sign;
+	long	result;
 
 	i = 0;
 	sign = 1;
@@ -37,35 +37,35 @@ static long	ft_atol(const char *str)
 	return (result * sign);
 }
 
-static int is_number(const char *num)
+static int	is_number(const char *num)
 {
-    int     i;
-    long    tmp;
+	int		i;
+	long	tmp;
 
-    i = 0;
-    if (num[i] == '-' || num[i] == '+')
-        i++;
-    while (num[i])
-    {
-        if (!ft_isdigit(num[i]))
-            return (0);
-        i++;
-    }
-    tmp = ft_atol(num);
-    if (tmp > 2147483647 || tmp < -2147483648)
-        return (0);
-    return (1);
+	i = 0;
+	if (num[i] == '-' || num[i] == '+')
+		i++;
+	while (num[i])
+	{
+		if (!ft_isdigit(num[i]))
+			return (0);
+		i++;
+	}
+	tmp = ft_atol(num);
+	if (tmp > 2147483647 || tmp < -2147483648)
+		return (0);
+	return (1);
 }
 
-static int has_duplicates(char **splitted)
+static int	has_duplicates(char **splitted)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (splitted[i])
 	{
-		j = i + 1;                   
+		j = i + 1;
 		while (splitted[j])
 		{
 			if (ft_atoi(splitted[i]) == ft_atoi(splitted[j]))
@@ -90,7 +90,7 @@ static char	*join_args(char **argv)
 	{
 		temp = ft_strjoin(joined, " ");
 		free(joined);
-		temp2 = ft_strjoin(temp, argv[i]); //temp2 siz yap.
+		temp2 = ft_strjoin(temp, argv[i]);
 		free(temp);
 		joined = temp2;
 		i++;
@@ -98,25 +98,26 @@ static char	*join_args(char **argv)
 	return (joined);
 }
 
-int validate_arguments(char **argv)
+int	validate_arguments(char **argv)
 {
-    char	*all_args;
+	char	*all_args;
 	char	**splitted;
 	int		i;
-    
-    i = 0;
-    all_args = join_args(argv);
-    splitted = ft_split(all_args, ' ');
-    free(all_args);
-    while (splitted[i])
-    {
-        if (!is_number(splitted[i]))
-            error_exit(splitted);
-        i++;
-    }
-    if (has_duplicates(splitted))
-        error_exit(splitted);
-	// ft_get_stack(stack_a, argc, argv, splitted);
-    ft_free_str(splitted);
-    return (1);
+
+	i = 0;
+	all_args = join_args(argv);
+	splitted = ft_split(all_args, ' ');
+	free(all_args);
+	if (!splitted || !splitted[0])
+		exit (1);
+	while (splitted[i])
+	{
+		if (!is_number(splitted[i]))
+			error_exit(splitted);
+		i++;
+	}
+	if (has_duplicates(splitted))
+		error_exit(splitted);
+	ft_free_str(splitted);
+	return (1);
 }

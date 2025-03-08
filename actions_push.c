@@ -6,7 +6,7 @@
 /*   By: sencetin <sencetin@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 14:38:11 by sencetin          #+#    #+#             */
-/*   Updated: 2025/03/06 21:01:04 by sencetin         ###   ########.fr       */
+/*   Updated: 2025/03/08 02:50:59 by sencetin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_pa(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack *tmp;
-	
+	t_stack	*tmp;
+
 	if (stack_b == NULL || *stack_b == NULL || stack_a == NULL)
 		return ;
 	tmp = *stack_b;
@@ -27,7 +27,7 @@ void	ft_pa(t_stack **stack_a, t_stack **stack_b)
 
 void	ft_pb(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	if (stack_a == NULL || *stack_a == NULL || stack_a == NULL)
 		return ;
